@@ -1,0 +1,8 @@
+#!/bin/bash
+FILE=gameboy
+echo "Compiling & Executing with Valgrind:"
+make $FILE
+if test -f "./$FILE"; then
+    valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 ./$FILE SUSCRIPTOR NEW_POKEMON 10
+fi
+echo "Finished executing with Valgrind."

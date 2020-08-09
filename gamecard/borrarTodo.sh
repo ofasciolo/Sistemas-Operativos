@@ -1,0 +1,1 @@
+rm -rf ./TALL_GRASS/

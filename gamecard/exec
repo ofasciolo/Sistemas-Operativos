@@ -1,0 +1,8 @@
+#!/bin/bash
+FILE=gamecard
+echo "Compiling & Executing Normally:"
+make $FILE
+if test -f "./$FILE"; then
+    ./$FILE
+fi
+echo "Finished executing normally."
