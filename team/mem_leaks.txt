@@ -1,0 +1,341 @@
+==8343== Memcheck, a memory error detector
+==8343== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==8343== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==8343== Command: ./team
+==8343== Parent PID: 8335
+==8343== 
+==8343== 
+==8343== Process terminating with default action of signal 2 (SIGINT)
+==8343==    at 0x40623FB: pthread_join (pthread_join.c:90)
+==8343==    by 0x804978A: validateEndTeam (inicializacion.c:51)
+==8343==    by 0x8049672: initialize_team (inicializacion.c:28)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== HEAP SUMMARY:
+==8343==     in use at exit: 3,290 bytes in 121 blocks
+==8343==   total heap usage: 1,302 allocs, 1,181 frees, 60,079 bytes allocated
+==8343== 
+==8343== 5 bytes in 1 blocks are still reachable in loss record 1 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x40FE2C5: strdup (strdup.c:42)
+==8343==    by 0x405409A: string_duplicate (in /usr/lib/libcommons.so)
+==8343==    by 0x4053C49: log_create (in /usr/lib/libcommons.so)
+==8343==    by 0x80498E7: create_obligatory_logger (inicializacion.c:100)
+==8343==    by 0x80495F4: initialize_team (inicializacion.c:15)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 5 bytes in 1 blocks are still reachable in loss record 2 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x40FE2C5: strdup (strdup.c:42)
+==8343==    by 0x405409A: string_duplicate (in /usr/lib/libcommons.so)
+==8343==    by 0x4053C49: log_create (in /usr/lib/libcommons.so)
+==8343==    by 0x804995E: create_optional_logger (inicializacion.c:110)
+==8343==    by 0x80495F9: initialize_team (inicializacion.c:16)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 8 bytes in 1 blocks are still reachable in loss record 3 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4054E01: list_create (in /usr/lib/libcommons.so)
+==8343==    by 0x80495CA: initialize_team (inicializacion.c:10)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 8 bytes in 1 blocks are still reachable in loss record 4 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4054E01: list_create (in /usr/lib/libcommons.so)
+==8343==    by 0x80495D4: initialize_team (inicializacion.c:11)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 8 bytes in 1 blocks are still reachable in loss record 5 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4054E01: list_create (in /usr/lib/libcommons.so)
+==8343==    by 0x80495E5: initialize_team (inicializacion.c:13)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 8 bytes in 1 blocks are still reachable in loss record 6 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4056393: config_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049886: read_config (inicializacion.c:91)
+==8343==    by 0x80495EF: initialize_team (inicializacion.c:14)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 8 bytes in 1 blocks are still reachable in loss record 7 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4054E01: list_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049B04: assign_data_trainer (inicializacion.c:134)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 8 bytes in 1 blocks are still reachable in loss record 8 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x8049EE8: assign_data_trainer (inicializacion.c:197)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 8 bytes in 1 blocks are still reachable in loss record 9 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4055905: list_create_element (in /usr/lib/libcommons.so)
+==8343==    by 0x4054E3D: list_add (in /usr/lib/libcommons.so)
+==8343==    by 0x8049F20: assign_data_trainer (inicializacion.c:199)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 8 bytes in 1 blocks are still reachable in loss record 10 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4054E01: list_create (in /usr/lib/libcommons.so)
+==8343==    by 0x804A083: calculate_global_objetives (inicializacion.c:237)
+==8343==    by 0x8049608: initialize_team (inicializacion.c:20)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 16 bytes in 1 blocks are still reachable in loss record 11 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x40559F7: dictionary_create (in /usr/lib/libcommons.so)
+==8343==    by 0x40563B6: config_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049886: read_config (inicializacion.c:91)
+==8343==    by 0x80495EF: initialize_team (inicializacion.c:14)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 18 bytes in 1 blocks are still reachable in loss record 12 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x40FE2C5: strdup (strdup.c:42)
+==8343==    by 0x40563A7: config_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049886: read_config (inicializacion.c:91)
+==8343==    by 0x80495EF: initialize_team (inicializacion.c:14)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 20 bytes in 1 blocks are still reachable in loss record 13 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4053BA3: log_create (in /usr/lib/libcommons.so)
+==8343==    by 0x80498E7: create_obligatory_logger (inicializacion.c:100)
+==8343==    by 0x80495F4: initialize_team (inicializacion.c:15)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 20 bytes in 1 blocks are still reachable in loss record 14 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4053BA3: log_create (in /usr/lib/libcommons.so)
+==8343==    by 0x804995E: create_optional_logger (inicializacion.c:110)
+==8343==    by 0x80495F9: initialize_team (inicializacion.c:16)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 24 bytes in 3 blocks are still reachable in loss record 15 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4054E01: list_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049B8A: assign_data_trainer (inicializacion.c:147)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 24 bytes in 3 blocks are still reachable in loss record 16 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4054E01: list_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049B97: assign_data_trainer (inicializacion.c:148)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 24 bytes in 3 blocks are still reachable in loss record 17 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4055905: list_create_element (in /usr/lib/libcommons.so)
+==8343==    by 0x4054E3D: list_add (in /usr/lib/libcommons.so)
+==8343==    by 0x8049DE0: assign_data_trainer (inicializacion.c:184)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 38 bytes in 5 blocks are still reachable in loss record 18 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x804ABDB: reception_message_queue_subscription (suscripcion.c:167)
+==8343==    by 0x804EE52: serve_client (common_connections.c:106)
+==8343==    by 0x4061294: start_thread (pthread_create.c:333)
+==8343==    by 0x41700AD: clone (clone.S:114)
+==8343== 
+==8343== 40 bytes in 5 blocks are still reachable in loss record 19 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4055905: list_create_element (in /usr/lib/libcommons.so)
+==8343==    by 0x4054E3D: list_add (in /usr/lib/libcommons.so)
+==8343==    by 0x4054EBE: _add_in_list.2211 (in /usr/lib/libcommons.so)
+==8343==    by 0x4055148: list_iterate (in /usr/lib/libcommons.so)
+==8343==    by 0x4054F2D: list_add_all (in /usr/lib/libcommons.so)
+==8343==    by 0x804A0CA: calculate_global_objetives (inicializacion.c:247)
+==8343==    by 0x8049608: initialize_team (inicializacion.c:20)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 40 bytes in 5 blocks are still reachable in loss record 20 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4055905: list_create_element (in /usr/lib/libcommons.so)
+==8343==    by 0x4054E3D: list_add (in /usr/lib/libcommons.so)
+==8343==    by 0x804AC38: reception_message_queue_subscription (suscripcion.c:171)
+==8343==    by 0x804EE52: serve_client (common_connections.c:106)
+==8343==    by 0x4061294: start_thread (pthread_create.c:333)
+==8343==    by 0x41700AD: clone (clone.S:114)
+==8343== 
+==8343== 46 bytes in 6 blocks are still reachable in loss record 21 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x804A014: addValuesToListFromArray (inicializacion.c:221)
+==8343==    by 0x8049D20: assign_data_trainer (inicializacion.c:163)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 48 bytes in 1 blocks are still reachable in loss record 22 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4156A1D: gaih_inet (getaddrinfo.c:1223)
+==8343==    by 0x41583E2: getaddrinfo (getaddrinfo.c:2425)
+==8343==    by 0x804F11F: crear_conexion (common_connections.c:173)
+==8343==    by 0x804A512: connection_broker_suscribe_to_appeared_pokemon (suscripcion.c:19)
+==8343==    by 0x804A49A: connection_broker_global_suscribe (suscripcion.c:6)
+==8343==    by 0x4061294: start_thread (pthread_create.c:333)
+==8343==    by 0x41700AD: clone (clone.S:114)
+==8343== 
+==8343== 48 bytes in 1 blocks are still reachable in loss record 23 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4156A1D: gaih_inet (getaddrinfo.c:1223)
+==8343==    by 0x41583E2: getaddrinfo (getaddrinfo.c:2425)
+==8343==    by 0x804F11F: crear_conexion (common_connections.c:173)
+==8343==    by 0x804B0A4: send_get_pokemon_global_team (suscripcion.c:254)
+==8343==    by 0x4061294: start_thread (pthread_create.c:333)
+==8343==    by 0x41700AD: clone (clone.S:114)
+==8343== 
+==8343== 48 bytes in 6 blocks are still reachable in loss record 24 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4055905: list_create_element (in /usr/lib/libcommons.so)
+==8343==    by 0x4054E3D: list_add (in /usr/lib/libcommons.so)
+==8343==    by 0x804A03C: addValuesToListFromArray (inicializacion.c:223)
+==8343==    by 0x8049D20: assign_data_trainer (inicializacion.c:163)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 60 bytes in 3 blocks are still reachable in loss record 25 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x8049B6A: assign_data_trainer (inicializacion.c:144)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 80 bytes in 1 blocks are still reachable in loss record 26 of 38
+==8343==    at 0x402E0B8: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4055A18: dictionary_create (in /usr/lib/libcommons.so)
+==8343==    by 0x40563B6: config_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049886: read_config (inicializacion.c:91)
+==8343==    by 0x80495EF: initialize_team (inicializacion.c:14)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 100 bytes in 5 blocks are still reachable in loss record 27 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x804AB95: reception_message_queue_subscription (suscripcion.c:163)
+==8343==    by 0x804EE52: serve_client (common_connections.c:106)
+==8343==    by 0x4061294: start_thread (pthread_create.c:333)
+==8343==    by 0x41700AD: clone (clone.S:114)
+==8343== 
+==8343== 136 bytes in 1 blocks are possibly lost in loss record 28 of 38
+==8343==    at 0x402E0B8: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==8343==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==8343==    by 0x4061CC3: allocate_stack (allocatestack.c:588)
+==8343==    by 0x4061CC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==8343==    by 0x8049625: initialize_team (inicializacion.c:23)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 136 bytes in 1 blocks are possibly lost in loss record 29 of 38
+==8343==    at 0x402E0B8: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==8343==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==8343==    by 0x4061CC3: allocate_stack (allocatestack.c:588)
+==8343==    by 0x4061CC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==8343==    by 0x804EBFE: start_server (common_connections.c:54)
+==8343==    by 0x804A9FE: listen_to_gameboy (suscripcion.c:139)
+==8343==    by 0x804962D: initialize_team (inicializacion.c:24)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 136 bytes in 1 blocks are possibly lost in loss record 30 of 38
+==8343==    at 0x402E0B8: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==8343==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==8343==    by 0x4061CC3: allocate_stack (allocatestack.c:588)
+==8343==    by 0x4061CC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==8343==    by 0x8049640: initialize_team (inicializacion.c:25)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 136 bytes in 1 blocks are possibly lost in loss record 31 of 38
+==8343==    at 0x402E0B8: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==8343==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==8343==    by 0x4061CC3: allocate_stack (allocatestack.c:588)
+==8343==    by 0x4061CC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==8343==    by 0x804966A: initialize_team (inicializacion.c:27)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 174 bytes in 16 blocks are still reachable in loss record 32 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x40FE2C5: strdup (strdup.c:42)
+==8343==    by 0x405409A: string_duplicate (in /usr/lib/libcommons.so)
+==8343==    by 0x4054BA9: _string_split (in /usr/lib/libcommons.so)
+==8343==    by 0x40546AF: string_n_split (in /usr/lib/libcommons.so)
+==8343==    by 0x40562B0: add_cofiguration.2909 (in /usr/lib/libcommons.so)
+==8343==    by 0x4054846: string_iterate_lines (in /usr/lib/libcommons.so)
+==8343==    by 0x4056444: config_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049886: read_config (inicializacion.c:91)
+==8343==    by 0x80495EF: initialize_team (inicializacion.c:14)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 204 bytes in 3 blocks are still reachable in loss record 33 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x8049D49: assign_data_trainer (inicializacion.c:172)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 248 bytes in 16 blocks are still reachable in loss record 34 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x40FE2C5: strdup (strdup.c:42)
+==8343==    by 0x4055B2D: dictionary_put (in /usr/lib/libcommons.so)
+==8343==    by 0x40562D3: add_cofiguration.2909 (in /usr/lib/libcommons.so)
+==8343==    by 0x4054846: string_iterate_lines (in /usr/lib/libcommons.so)
+==8343==    by 0x4056444: config_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049886: read_config (inicializacion.c:91)
+==8343==    by 0x80495EF: initialize_team (inicializacion.c:14)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 256 bytes in 16 blocks are still reachable in loss record 35 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4056004: dictionary_create_element (in /usr/lib/libcommons.so)
+==8343==    by 0x4055B3F: dictionary_put (in /usr/lib/libcommons.so)
+==8343==    by 0x40562D3: add_cofiguration.2909 (in /usr/lib/libcommons.so)
+==8343==    by 0x4054846: string_iterate_lines (in /usr/lib/libcommons.so)
+==8343==    by 0x4056444: config_create (in /usr/lib/libcommons.so)
+==8343==    by 0x8049886: read_config (inicializacion.c:91)
+==8343==    by 0x80495EF: initialize_team (inicializacion.c:14)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 344 bytes in 1 blocks are still reachable in loss record 36 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x40E7359: __fopen_internal (iofopen.c:69)
+==8343==    by 0x40E741D: fopen@@GLIBC_2.1 (iofopen.c:97)
+==8343==    by 0x4053ADA: txt_open_for_append (in /usr/lib/libcommons.so)
+==8343==    by 0x4053BE3: log_create (in /usr/lib/libcommons.so)
+==8343==    by 0x80498E7: create_obligatory_logger (inicializacion.c:100)
+==8343==    by 0x80495F4: initialize_team (inicializacion.c:15)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 344 bytes in 1 blocks are still reachable in loss record 37 of 38
+==8343==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x40E7359: __fopen_internal (iofopen.c:69)
+==8343==    by 0x40E741D: fopen@@GLIBC_2.1 (iofopen.c:97)
+==8343==    by 0x4053ADA: txt_open_for_append (in /usr/lib/libcommons.so)
+==8343==    by 0x4053BE3: log_create (in /usr/lib/libcommons.so)
+==8343==    by 0x804995E: create_optional_logger (inicializacion.c:110)
+==8343==    by 0x80495F9: initialize_team (inicializacion.c:16)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== 408 bytes in 3 blocks are possibly lost in loss record 38 of 38
+==8343==    at 0x402E0B8: calloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==8343==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==8343==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==8343==    by 0x4061CC3: allocate_stack (allocatestack.c:588)
+==8343==    by 0x4061CC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==8343==    by 0x8049DF9: assign_data_trainer (inicializacion.c:185)
+==8343==    by 0x8049603: initialize_team (inicializacion.c:19)
+==8343==    by 0x804BE90: main (team.c:5)
+==8343== 
+==8343== LEAK SUMMARY:
+==8343==    definitely lost: 0 bytes in 0 blocks
+==8343==    indirectly lost: 0 bytes in 0 blocks
+==8343==      possibly lost: 952 bytes in 7 blocks
+==8343==    still reachable: 2,338 bytes in 114 blocks
+==8343==         suppressed: 0 bytes in 0 blocks
+==8343== 
+==8343== For counts of detected and suppressed errors, rerun with: -v
+==8343== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)

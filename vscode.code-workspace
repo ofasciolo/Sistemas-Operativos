@@ -1,0 +1,47 @@
+{
+	"folders": [
+		{
+			"path": "broker"
+		},
+		{
+			"path": "shared"
+		},
+		{
+			"path": "team"
+		},
+		{
+			"path": "gamecard"
+		},
+		{
+			"path": "gameboy"
+		}
+	],
+	"settings": {
+		"files.associations": {
+
+			"configuracion.h": "c",
+			"pthread.h": "c",
+			"team.h": "c",
+			"common_utils.h": "c",
+			"string.h": "c"
+			"dump.h": "c",
+			"common_tests.h": "c"
+			"initializer_list": "c"
+		},
+		"git.ignoreLimitWarning": true
+	},
+	"launch": {
+		"configurations": [],
+		"compounds": [
+			{
+				"name": "All 4",
+				"configurations": [
+					"Broker",
+					"Team",
+					"Gamecard",
+					"Gameboy"
+				]
+			}
+		]
+	}
+}

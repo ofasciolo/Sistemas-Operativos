@@ -1,0 +1,78 @@
+==4247== Memcheck, a memory error detector
+==4247== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==4247== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==4247== Command: ./team
+==4247== Parent PID: 4245
+==4247== 
+==4247== Thread 7:
+==4247== Invalid read of size 4
+==4247==    at 0x4030ED0: memcpy (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==4247==    by 0x804EF80: serializar_paquete (common_connections.c:138)
+==4247==    by 0x804F55D: send_new_connection (common_connections.c:265)
+==4247==    by 0x804A523: connection_broker_suscribe_to_appeared_pokemon (suscripcion.c:20)
+==4247==    by 0x804A49A: connection_broker_global_suscribe (suscripcion.c:6)
+==4247==    by 0x4061294: start_thread (pthread_create.c:333)
+==4247==    by 0x41700AD: clone (clone.S:114)
+==4247==  Address 0x424e3c8 is 0 bytes after a block of size 0 alloc'd
+==4247==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==4247==    by 0x804E440: new_connection_to_stream (common_utils.c:301)
+==4247==    by 0x804F53B: send_new_connection (common_connections.c:261)
+==4247==    by 0x804A523: connection_broker_suscribe_to_appeared_pokemon (suscripcion.c:20)
+==4247==    by 0x804A49A: connection_broker_global_suscribe (suscripcion.c:6)
+==4247==    by 0x4061294: start_thread (pthread_create.c:333)
+==4247==    by 0x41700AD: clone (clone.S:114)
+==4247== 
+==4247== Invalid read of size 4
+==4247==    at 0x4030ED0: memcpy (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==4247==    by 0x804EF80: serializar_paquete (common_connections.c:138)
+==4247==    by 0x804F55D: send_new_connection (common_connections.c:265)
+==4247==    by 0x804A596: connection_broker_suscribe_to_caught_pokemon (suscripcion.c:29)
+==4247==    by 0x804A4A7: connection_broker_global_suscribe (suscripcion.c:7)
+==4247==    by 0x4061294: start_thread (pthread_create.c:333)
+==4247==    by 0x41700AD: clone (clone.S:114)
+==4247==  Address 0x4250178 is 0 bytes after a block of size 0 alloc'd
+==4247==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==4247==    by 0x804E440: new_connection_to_stream (common_utils.c:301)
+==4247==    by 0x804F53B: send_new_connection (common_connections.c:261)
+==4247==    by 0x804A596: connection_broker_suscribe_to_caught_pokemon (suscripcion.c:29)
+==4247==    by 0x804A4A7: connection_broker_global_suscribe (suscripcion.c:7)
+==4247==    by 0x4061294: start_thread (pthread_create.c:333)
+==4247==    by 0x41700AD: clone (clone.S:114)
+==4247== 
+==4247== Invalid read of size 4
+==4247==    at 0x4030ED0: memcpy (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==4247==    by 0x804EF80: serializar_paquete (common_connections.c:138)
+==4247==    by 0x804F55D: send_new_connection (common_connections.c:265)
+==4247==    by 0x804A609: connection_broker_suscribe_to_localized_pokemon (suscripcion.c:38)
+==4247==    by 0x804A4B4: connection_broker_global_suscribe (suscripcion.c:8)
+==4247==    by 0x4061294: start_thread (pthread_create.c:333)
+==4247==    by 0x41700AD: clone (clone.S:114)
+==4247==  Address 0x4252218 is 0 bytes after a block of size 0 alloc'd
+==4247==    at 0x402C17C: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==4247==    by 0x804E440: new_connection_to_stream (common_utils.c:301)
+==4247==    by 0x804F53B: send_new_connection (common_connections.c:261)
+==4247==    by 0x804A609: connection_broker_suscribe_to_localized_pokemon (suscripcion.c:38)
+==4247==    by 0x804A4B4: connection_broker_global_suscribe (suscripcion.c:8)
+==4247==    by 0x4061294: start_thread (pthread_create.c:333)
+==4247==    by 0x41700AD: clone (clone.S:114)
+==4247== 
+==4247== Thread 12:
+==4247== Conditional jump or move depends on uninitialised value(s)
+==4247==    at 0x804B4C9: processCaughtPokemon (suscripcion.c:342)
+==4247==    by 0x804ACF9: reception_message_queue_subscription (suscripcion.c:184)
+==4247==    by 0x804EE1F: serve_client (common_connections.c:106)
+==4247==    by 0x804A95F: connect_client (suscripcion.c:125)
+==4247==    by 0x804A81D: suscribeOnThreadList (suscripcion.c:81)
+==4247==    by 0x4061294: start_thread (pthread_create.c:333)
+==4247==    by 0x41700AD: clone (clone.S:114)
+==4247== 
+==4247== 
+==4247== HEAP SUMMARY:
+==4247==     in use at exit: 0 bytes in 0 blocks
+==4247==   total heap usage: 7,396 allocs, 7,396 frees, 291,856 bytes allocated
+==4247== 
+==4247== All heap blocks were freed -- no leaks are possible
+==4247== 
+==4247== For counts of detected and suppressed errors, rerun with: -v
+==4247== Use --track-origins=yes to see where uninitialised values come from
+==4247== ERROR SUMMARY: 14 errors from 4 contexts (suppressed: 0 from 0)
